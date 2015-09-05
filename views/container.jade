@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.row
+    div.col-md-4
+      div.panel.panel-default
+        div.panel-heading.clearfix
+          h3.panel-title.pull-left オブジェクト作成
+        div.panel-body
+          form(method='POST', enctype="multipart/form-data")
+            input(type='file', name='object')
+            input(type='submit', value='Create')
+    each object in objects
+      div.col-md-4
+        div.panel.panel-default
+          div.panel-heading.clearfix
+            h3.panel-title.pull-left= object
+          div.panel-body
+            a.btn.btn-default(href=container + '/' + object) ダウンロード
+            form(method='POST', action=container + '/' + object + '/delete')
+              input.btn.btn-danger(type='submit', value='Delete')

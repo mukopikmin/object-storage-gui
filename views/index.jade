@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.row
+    div.col-md-4
+      div.panel.panel-default
+        div.panel-heading.clearfix
+          h3.panel-title.pull-left コンテナ作成
+        div.panel-body
+          form(method='POST')
+            input(type='text', name='container')
+            input(type='submit', value='Create')
+    each container in containers
+      div.col-md-4
+        div.panel.panel-default
+          div.panel-heading.clearfix
+            h3.panel-title.pull-left= container
+          div.panel-body
+            a.btn.btn-default(href=container) オブジェクト参照
+            form(method='POST', action=container + '/delete')
+              input.btn.btn-danger(type='submit', value='Delete')
