@@ -5,7 +5,7 @@ block content
     div.col-md-4
       div.panel.panel-default
         div.panel-heading.clearfix
-          h3.panel-title.pull-left コンテナ作成
+          h3.panel-title.pull-left Create new container
         div.panel-body
           form(method='POST')
             input(type='text', name='container')
@@ -16,6 +16,6 @@ block content
           div.panel-heading.clearfix
             h3.panel-title.pull-left= container
           div.panel-body
-            a.btn.btn-default(href=container) オブジェクト参照
+            a.btn.btn-default(href=container) View objects
             form(method='POST', action=container + '/delete')
               input.btn.btn-danger(type='submit', value='Delete')

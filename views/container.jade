@@ -5,7 +5,7 @@ block content
     div.col-md-4
       div.panel.panel-default
         div.panel-heading.clearfix
-          h3.panel-title.pull-left オブジェクト作成
+          h3.panel-title.pull-left Create new object
         div.panel-body
           form(method='POST', enctype="multipart/form-data")
             input(type='file', name='object')
@@ -16,6 +16,6 @@ block content
           div.panel-heading.clearfix
             h3.panel-title.pull-left= object
           div.panel-body
-            a.btn.btn-default(href=container + '/' + object) ダウンロード
+            a.btn.btn-default(href=container + '/' + object) Download
             form(method='POST', action=container + '/' + object + '/delete')
               input.btn.btn-danger(type='submit', value='Delete')
