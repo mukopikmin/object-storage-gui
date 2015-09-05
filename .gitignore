@@ -37,4 +37,4 @@ public/lib
 tmp
 
 # Files for development
-vcap.json
+credential.json

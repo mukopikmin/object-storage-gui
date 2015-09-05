@@ -9,6 +9,9 @@ var authUrl = null;
 var authToken = null;
 
 conf = cfenv.getAppEnv().getServiceCreds('Object Storage-oz');
+if (conf == null) {
+  conf = require('../credential.json');
+}
 
 var options = {
   url: conf.auth_uri + "/" + conf.username,
