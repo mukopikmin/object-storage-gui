@@ -35,3 +35,6 @@ public/lib
 
 # Uploaded file
 tmp
+
+# Files for development
+vcap.json
